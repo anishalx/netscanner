@@ -30,3 +30,51 @@ To run NetScanner, ensure you have:
 
 ```bash
 pip install scapy
+```
+### Clone the Repository
+
+1. Open your terminal (Command Prompt on Windows, Terminal on macOS/Linux).
+2. Clone the repository:
+
+```bash
+git clone https://github.com/anishal/netscanner.git
+cd netscanner/tools
+```
+### Usage
+To start scanning, run the script with your desired target IP or IP range:
+```bash
+python netscanner.py -t {your:IP eg.192.168.1.0/24}
+```
+### Example Output
+### Need Help?
+For a detailed list of options and usage instructions, simply run:
+```bash
+python netscanner.py -h
+```
+## Operating Systems
+
+NetScanner is compatible with:
+
+- **Windows**: Use Command Prompt or PowerShell.
+- **macOS**: Utilize Terminal for seamless execution.
+- **Linux**: Run in any terminal emulator of your choice.
+
+## Contributing
+
+We welcome contributions from the community! If you have ideas for improvements or new features, please follow these steps:
+
+1. **Fork the repository**.
+2. **Create a new branch** (`git checkout -b feature/YourFeature`).
+3. **Make your changes** and commit them (`git commit -m 'Add some feature'`).
+4. **Push your branch** (`git push origin feature/YourFeature`).
+5. **Open a pull request**.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Special thanks to [Scapy](https://scapy.readthedocs.io/en/latest/) for powering this tool.
+- Inspired by various network scanning tools and the open-source community.
+
