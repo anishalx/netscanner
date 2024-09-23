@@ -47,7 +47,7 @@ pip install scapy
 2. Clone the repository:
 
 ```bash
-git clone https://github.com/anishal/netscanner.git
+git clone https://github.com/anishalx/netscanner.git
 cd netscanner/tools
 ```
 ### Usage
