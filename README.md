@@ -56,6 +56,9 @@ To start scanning, run the script with your desired target IP or IP range:
 python netscanner.py -t {your:IP eg.192.168.1.0/24}
 ```
 ### Example Output
+<b>Enter IP range</b>
+  <p align="center"><img src="https://www.imghost.net/ib/CVPFeSCQEvU5fKS_1727111197.png" width="50%" height="20%"/></p> 
+  
 ### Need Help?
 For a detailed list of options and usage instructions, simply run:
 ```bash
