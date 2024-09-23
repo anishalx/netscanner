@@ -48,7 +48,7 @@ pip install scapy
 
 ```bash
 git clone https://github.com/anishalx/netscanner.git
-cd netscanner/tools
+cd netscanner
 ```
 ### Usage
 To start scanning, run the script with your desired target IP or IP range:
