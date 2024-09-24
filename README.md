@@ -56,11 +56,11 @@ To start scanning, run the script with your desired target IP or IP range:
 python netscanner.py -t {your:IP eg.192.168.1.0/24}
 ```
 ### Example Output
-<b>Enter IP range </b>
+<b>DEMO VIDEO </b>
  <a href="https://youtu.be/xmOvvurg90A" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="32" height="25" alt="youtube logo"  />
   </a>
-**DEMO VIDEO**
+  
   <p align="center"><img src="https://www.imghost.net/ib/CVPFeSCQEvU5fKS_1727111197.png" width="50%" height="20%"/></p> 
   
 ### Need Help?
