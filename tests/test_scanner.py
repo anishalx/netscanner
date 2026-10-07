@@ -519,6 +519,21 @@ def test_syn_scan_closed(monkeypatch):
     assert results[0]["state"] == "closed"
 
 
+def test_syn_scan_rst_ack_reply_is_closed_not_open(monkeypatch):
+    # A closed port answers a SYN with RST+ACK (flags 0x14), not a bare RST.
+    # `flags & 0x12` is truthy for 0x14, so these used to be reported as OPEN.
+    from scapy.all import IP, TCP
+
+    monkeypatch.setattr(
+        scanner, "sr1", lambda *a, **k: IP(ttl=64) / TCP(dport=80, flags="RA", window=0)
+    )
+    assert syn_scan(["192.168.1.10"], [80]) == []
+    results = syn_scan(["192.168.1.10"], [80], include_closed=True)
+    assert results[0]["state"] == "closed"
+    assert results[0]["os"] is None
+    assert results[0]["ttl"] is None
+
+
 def test_syn_scan_filtered_no_reply(monkeypatch):
     monkeypatch.setattr(scanner, "sr1", lambda *a, **k: None)
     assert syn_scan(["192.168.1.10"], [80]) == []

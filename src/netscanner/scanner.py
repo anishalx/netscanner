@@ -518,7 +518,11 @@ def syn_scan(
         os_guess = ttl_obs = window_obs = None
         if reply is not None and reply.haslayer(TCP):
             flags = int(reply[TCP].flags)
-            if flags & 0x12:  # SYN-ACK -> open
+            # A SYN-ACK has BOTH SYN and ACK set. Testing `flags & 0x12` for
+            # truthiness also matched RST+ACK (0x14) -- the reply a *closed*
+            # port sends to a SYN (RFC 793) -- so closed ports were reported
+            # as open and even got OS-fingerprinted.
+            if (flags & 0x12) == 0x12:  # SYN-ACK -> open
                 state = "open"
                 if reply.haslayer(IP):
                     ttl_obs = int(reply[IP].ttl)
