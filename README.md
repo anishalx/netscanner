@@ -41,7 +41,7 @@
 - **Live progress reporting**: long scans show a rate-limited `done/total (%)` indicator on stderr (auto-hidden for small scans, and a `completed X/Y in Zs` summary always goes to stderr so stdout stays clean for data); `-q/--quiet` silences all of it
 - **Hostname resolution** for discovered devices (`--resolve`)
 - **Structured error handling**: clear messages for bad targets, missing privileges, and missing drivers — never a raw traceback
-- **Fully unit-tested** (66 tests, all network calls mocked), with CI across Python 3.9–3.13
+- **Fully unit-tested** (155 tests, all network calls mocked), with CI across Python 3.9–3.13
 
 ## Installation
 
